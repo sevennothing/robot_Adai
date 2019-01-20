@@ -1,0 +1,7 @@
+{
+	"name":"A Dai",
+	"brithDayy":"2019-1-20 16:15",
+	"resource":{
+		"GPIO":["GPIO11"]
+	}
+}
