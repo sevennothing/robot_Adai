@@ -2,7 +2,7 @@
 #Author: caijun.Li <sevennothing@gmail.com>
 #Date: 2019/01/20
 
-import SysDrv.GPIO as GPIO
+#import SysDrv.GPIO as GPIO
 
 
 class ServoControl(object):
@@ -21,7 +21,7 @@ class ServoControl(object):
         self.status = {}
         self.methods = {}
 
-        if(superUnit != None)
+        if(superUnit != None):
             self._dump_info = superUnit['dump_info']
         else:
             self._dump_info = None

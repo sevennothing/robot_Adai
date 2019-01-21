@@ -2,6 +2,22 @@
 	"name":"A Dai",
 	"brithDayy":"2019-1-20 16:15",
 	"resource":{
-		"GPIO":["GPIO11"]
+		"GPIO":["GPIO11", "GPIO21", "GPIO22"],
+		"SPI":["SPI1","SPI2"],
+		"IIC":["IIC1","IIC2"],
+		"SERVOMOTOR":[
+			{"rsname": "servo1",
+            "SignalPin": "GPIO21",
+            "Power":"5V",
+            "MaxAngle":"180",
+            "limitAngle":"180"
+			},
+			{"rsname": "servo2",
+            "SignalPin": "GPIO22",
+            "Power":"5V",
+            "MaxAngle":"180",
+            "limitAngle":"180"
+			}
+		]
 	}
 }
