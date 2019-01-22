@@ -1,22 +1,51 @@
 {
 	"name":"A Dai",
-	"brithDayy":"2019-1-20 16:15",
+	"brithDay":"2019-1-20 16:15",
+	"debug":3,
 	"resource":{
-		"GPIO":["GPIO11", "GPIO21", "GPIO22"],
+		"GPIO":[
+			{"rsname":"GPIO11",
+				"HIGHLEVEL":1,
+				"LOWLEVEL":0,
+				"Direction":"bidirection"
+			}, 
+			{"rsname":"GPIO21",
+				"HIGHLEVEL":1,
+				"LOWLEVEL":0,
+				"Direction":"bidirection"
+			}, 
+			{"rsname":"GPIO22",
+				"HIGHLEVEL":1,
+				"LOWLEVEL":0,
+				"Direction":"bidirection"
+			}
+		],
+
 		"SPI":["SPI1","SPI2"],
 		"IIC":["IIC1","IIC2"],
+
 		"SERVOMOTOR":[
 			{"rsname": "servo1",
-            "SignalPin": "GPIO21",
-            "Power":"5V",
-            "MaxAngle":"180",
-            "limitAngle":"180"
+             "PowerV":[5],
+			 "protocol":{
+			 	"name":"GPIO-PWM",
+			 	"pins": [{"name":"GPIO21", "aliase":"SIGNAL", "IDLE":1}]
+			 	},
+             "privateParam":{
+             		"MaxAngle":180,
+             		"limitAngle":180
+         		}
 			},
 			{"rsname": "servo2",
-            "SignalPin": "GPIO22",
-            "Power":"5V",
-            "MaxAngle":"180",
-            "limitAngle":"180"
+             "PowerV":[5],
+			 "protocol":{
+			 	"name":"GPIO-PWM",
+			 	"pins": [{"name":"GPIO22", "aliase":"SIGNAL", "IDLE":"Z"}]
+			 	},
+             "privateParam":{
+             		"MaxAngle":180,
+             		"limitAngle":180
+             	}
 			}
 		]
 	}
